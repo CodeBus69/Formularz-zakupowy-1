@@ -43,6 +43,7 @@ function showMeOrder () {
             order.value += products[i] + "(" + products_counter[i] + "), "; 
         }
     }
+    title();
 }
 
 function clearOrder () { 
@@ -51,4 +52,15 @@ function clearOrder () {
         boomerRemover(i);
     }
     showMeOrder();
+}
+
+function title () { 
+    let basket=0,
+        title = '';
+    for (i=0; i<products_counter.length; i++) { 
+        basket += products_counter[i];
+    }
+    if (basket==0) title = "Zamawiaj z przyjemnością!";
+    else if (basket>0) title = "(" + basket +") Zamawiaj z przyjemnością!";
+    document.getElementsByTagName("title")[0].innerHTML = title;
 }

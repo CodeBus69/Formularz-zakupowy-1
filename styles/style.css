@@ -10,8 +10,8 @@ body {
     height: 100vh;
 }
 .container { 
-    height: 500px; 
-    width: 1000px;
+    height: 700px; 
+    width: 1200px;
     display: flex;
 }
 
@@ -116,7 +116,7 @@ input:-webkit-autofill:active  {
 }
 .products { 
     width: 85%; 
-    height: 80%; 
+    height: 50%; 
 }
 
 .product_row { 
@@ -149,9 +149,7 @@ input:-webkit-autofill:active  {
     outline: none;
 }
 
-#_produkt0,#_produkt1,#_produkt2,#_produkt3,#_produkt4,#_produkt5,#_produkt6 { 
-   display: none; 
-}
+
 .clear_button { 
     width: 100%;
     height: 50px; 
@@ -170,7 +168,7 @@ input:-webkit-autofill:active  {
     background-color: #171717;
 }
 
-@media screen and (max-width: 1020px) { 
+@media screen and (max-width: 1200px) { 
     .container { 
         width: 90%; 
         min-height: 100vh; 
@@ -183,7 +181,7 @@ input:-webkit-autofill:active  {
 
     .add_products { 
         width: 100%; 
-        min-height: 50vh;        
+        min-height: 100vh;        
     }
 
     .products { 
@@ -202,12 +200,12 @@ input:-webkit-autofill:active  {
 @keyframes appear { 
     from {
         opacity: 0; 
-        margin-right: 500px;
+        width: 0;
     }
 
     to { 
         opacity: 1;
-        margin-right: 0;
+        width: 75%;
     }
 }
 
