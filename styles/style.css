@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Sriracha&display=swap');
+* { 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body { 
+    height: 100vh;
+}
+.container { 
+    height: 500px; 
+    width: 1000px;
+    display: flex;
+}
+
+.flex { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+
+span { 
+    font-family: 'Sriracha', cursive;
+    color: orange;
+}
+
+/* LEFT CONTAINER */ 
+
+.contact_form { 
+    width: 75%; 
+    height: 100%; 
+    border: 5px black solid; 
+    border-right: none;
+    animation-name: appear; 
+    animation-duration: 1.5s;
+}
+
+.order { 
+    width: 80%; 
+}
+.user_data_form { 
+    width: 50%; 
+    height: 30px;
+    float: left; 
+}
+
+.order_content { 
+    clear: both;
+    width: 100%; 
+    height: 125px;
+    padding: 10px 5px;
+}
+
+.order_input { 
+    border: none;
+    border-bottom: 2px solid black; 
+}
+
+.order textarea { 
+    resize: none;
+}
+
+.submit_button { 
+    height: 30px; 
+    width: 160px; 
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid black; 
+    cursor: pointer;
+    transition: background-color .3s;
+    margin-top: 10px;
+}
+.submit_button:hover { 
+    background-color: #171717;
+    color: white; 
+}
+
+
+/* ZMIANA KOLORU AUTOFILLA */ 
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px white inset !important;
+}
+
+
+/* RIGHT CONTAINER */ 
+
+
+.boomer_remover { 
+    height: 50px; 
+    width: 0%;
+    color: white; 
+    background-color: #171717; 
+    font-size: 20px;
+    cursor: pointer;
+    transition: width .5s;
+}
+.add_products { 
+    width: 25%;
+    height: 100%; 
+    background-color: black; 
+    color: white; 
+}
+
+.add_products h1 { 
+    animation-name: appear_only_opacity; 
+    animation-duration: 1.5s;
+    animation-delay: .7s;
+    animation-fill-mode: both;
+}
+.products { 
+    width: 85%; 
+    height: 80%; 
+}
+
+.product_row { 
+    width: 100%; 
+    height: 50px;
+    overflow: hidden;
+}
+.product_item { 
+    height: 50px;
+    width: 100%;
+    color: white; 
+    background-color: #171717; 
+    cursor: pointer;
+    text-transform: capitalize;
+    float:left;
+    transition: width .5s;
+    animation-name: fontSize; 
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.product_button:hover { 
+    background-color: #333333;
+}
+.product_button:active { 
+    border: 2px solid black; 
+    font-size: 17px;
+}
+.product_button:focus {
+    outline: none;
+}
+
+#_produkt0,#_produkt1,#_produkt2,#_produkt3,#_produkt4,#_produkt5,#_produkt6 { 
+   display: none; 
+}
+.clear_button { 
+    width: 100%;
+    height: 50px; 
+    background-color: #171717;
+    color: white; 
+    font-size: 14px;
+    outline: 5px solid black;
+    cursor: pointer;
+    animation-name: fontSize; 
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.clear_button:hover { 
+    color: white; 
+    background-color: #171717;
+}
+
+@media screen and (max-width: 1020px) { 
+    .container { 
+        width: 90%; 
+        min-height: 100vh; 
+        display: block;
+    }
+
+    .contact_form { 
+        width: 100%; 
+    }
+
+    .add_products { 
+        width: 100%; 
+        height: 50vh;
+        
+    }
+
+    .products { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact_form { 
+        border-right: 5px solid black;
+    }
+}
+
+/* ANIMACJE */ 
+
+@keyframes appear { 
+    from {
+        opacity: 0; 
+        margin-right: 500px;
+    }
+
+    to { 
+        opacity: 1;
+        margin-right: 0;
+    }
+}
+
+@keyframes appear_only_opacity { 
+    from { 
+        opacity:0;
+    }
+    to { 
+        opacity:1;
+    }
+}
+
+@keyframes fontSize { 
+    from { 
+        font-size: 1px;
+    }
+    to { 
+        font-size: 16px;
+    }
+}

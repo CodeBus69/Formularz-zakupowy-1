@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- PAGE TITLE -->
+    <title>Document</title>
+    <!-- META TAGS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Opis strony">
+    <meta name="keywords" content="słowa, kluczowe, strony">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <!-- SCRIPTS -->
+    <script src="scripts/script.js" defer></script>
+</head>
+<body class="flex">
+   <div class="container">
+       <div class="contact_form flex">
+           <h1>Zamów tutaj!</h1>
+           <form action="przekierowanie.php" method="POST" class="order">
+                <!-- EMAIL -->       <input    name="email"         class="user_data_form order_input" id="email"              type="text"   placeholder="Twój adres e-mail"          required>
+                <!-- PHONE -->       <input    name="phone"         class="user_data_form order_input" id="phone"              type="text"   placeholder="Twój numer telefonu"        required>
+                <!-- WIADOMOŚĆ-->    <textarea name="order_content" class="order_content order_input"  id="order_content"                    placeholder="Co chcesz nam powiedzieć?"  ></textarea>
+                <!-- ZAMÓWIENIE -->  <textarea name="products"      class="order_content order_input"  id="order"                            placeholder="Twoje zamówienie"           readonly></textarea>
+                <!-- SUBMIT -->      <input                         class="submit_button"                                      type="submit" value="Wyślij"                           >
+           </form>
+       </div>
+       <div class="add_products flex">
+            <h1 style="margin-bottom: 20px;">Dodaj <span>produkt</span></h1>
+            <div class="products">
+                <div class="product_row">
+                    <button onclick="addProduct(0)" class="product_item product_button" id="product0">jogurt grecki</button>
+                    <button onclick="removeProduct(0)" class="boomer_remover product_button" id="_product0" >-</button>
+                </div>
+                <div class="product_row">
+                    <button onclick="addProduct(1)" class="product_item product_button" id="product1">kefir</button>
+                    <button onclick="removeProduct(1)" class="boomer_remover product_button" id="_product1" >-</button>
+                </div>
+                <div class="product_row">
+                    <button onclick="addProduct(2)" class="product_item product_button" id="product2">kozi ser</button>
+                    <button onclick="removeProduct(2)" class="boomer_remover product_button" id="_product2" >-</button>                 
+                </div>
+                <div class="product_row">
+                    <button onclick="addProduct(3)" class="product_item product_button" id="product3">miód</button>
+                    <button onclick="removeProduct(3)" class="boomer_remover product_button" id="_product3" >-</button>     
+                </div>
+                <div class="product_row">
+                    <button onclick="addProduct(4)" class="product_item product_button" id="product4">mleko odtłuszczone</button>
+                    <button onclick="removeProduct(4)" class="boomer_remover product_button" id="_product4" >-</button>   
+                </div>
+                <div class="product_row">
+                    <button onclick="addProduct(5)" class="product_item product_button" id="product5">ser żółty</button>
+                    <button onclick="removeProduct(5)" class="boomer_remover product_button" id="_product5" >-</button>     
+                </div>
+                <div class="product_row">
+                    <button onclick="addProduct(6)" class="product_item product_button" id="product6">twaróg</button>
+                    <button onclick="removeProduct(6)" class="boomer_remover product_button" id="_product6" >-</button>
+                </div>
+                <button onclick="clearOrder()" class="clear_button">Wyczyść <span>listę zakupów</span></button>
+            </div>
+       </div>
+   </div>
+</body>
+</html>
